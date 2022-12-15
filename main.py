@@ -23,6 +23,7 @@ magic_fx.set_volume(0.9)
 
 screen=pygame.display.set_mode((screen_width,screen_height))
 pygame.display.set_caption("Brawler")
+pygame.display.set_icon(pygame.image.load(os.path.join("icon","icon.svg")))
 #set frame rate
 clock=pygame.time.Clock()
 FPS=60
@@ -145,7 +146,8 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run=False
-            pygame.quit()
-            exit()
+            
+            
     #update display function
     pygame.display.update()      
+pygame.quit()
